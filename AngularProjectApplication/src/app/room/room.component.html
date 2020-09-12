@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>List of Rooms</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>RoomNumber</th>
+        <th>BedInfo</th>
+      </tr>
+      <tr *ngFor= "let room of rooms">
+        <td>{{rooms.id}}</td>
+        <td>{{rooms.name}}</td>
+        <td>{{rooms.roomNumber}}</td>
+        <td>{{rooms.bedInfo}}</td>
+      </tr>
+</table>
+
+</body>
+</html>
