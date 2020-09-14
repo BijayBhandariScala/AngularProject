@@ -15,8 +15,12 @@ export class RoomComponent implements OnInit {
    }
 
   ngOnInit() {
-      this.roomservice.getAllRooms()
-      .subscribe(data=> this.rooms=data);
+    this.getRoomDetails();
+  }
+
+  getRoomDetails(): void{   
+    this.roomservice.getAllRooms()
+    .subscribe(data=> this.rooms=data);
   }
 
 }
